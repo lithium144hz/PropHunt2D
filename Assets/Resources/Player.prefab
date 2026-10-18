@@ -212,3 +212,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 5
   rb: {fileID: 0}
+  isHunter: 0
+  isCaught: 0
+  canMove: 0
+  propSprites:
+  - {fileID: 7482667652216324306, guid: 5b4cfae052b5ead4ba6fd009a63f2866, type: 3}
+  - {fileID: -9095717837082945937, guid: c6c3e4d276c262e4096788cbb4e6036e, type: 3}
+  - {fileID: 3625043607559282579, guid: e70b83f427828104b8266323c0f791be, type: 3}

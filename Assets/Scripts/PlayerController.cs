@@ -6,7 +6,9 @@ public class PlayerController : MonoBehaviourPun
     public float moveSpeed = 10f;
     public Rigidbody2D rb;
     public bool isHunter;
+    public bool isCaught = false;
     public bool canMove = false;
+    public Sprite[] propSprites;
     private Joystick joystick;
 
     private void Start()
@@ -26,7 +28,7 @@ public class PlayerController : MonoBehaviourPun
 
     private void Update()
     {
-        if (!photonView.IsMine || !canMove)
+        if (!photonView.IsMine || !canMove || isCaught)
         {
             return;
         }
@@ -60,6 +62,47 @@ public class PlayerController : MonoBehaviourPun
             if (gm != null)
             {
                 gm.ShowRoleScreen(isHunter);
+            }
+        }
+    }
+
+    [PunRPC]
+    public void RpcChangeProp(int propIndex)
+    {
+        if (propSprites != null && propIndex >= 0 && propIndex < propSprites.Length)
+        {
+            SpriteRenderer sr = GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.sprite = propSprites[propIndex];
+            }
+        }
+    }
+
+    public void SelectProp(int propIndex)
+    {
+        photonView.RPC("RpcChangeProp", RpcTarget.AllBuffered, propIndex);
+    }
+
+    [PunRPC]
+    public void RpcGetCaught()
+    {
+        isCaught = true;
+        canMove = false;
+        rb.linearVelocity = Vector2.zero;
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.3f);
+        }
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            GameManager gm = FindFirstObjectByType<GameManager>();
+            if (gm != null)
+            {
+                gm.CheckAllPropsCaught();
             }
         }
     }
