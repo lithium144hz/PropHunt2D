@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviourPun
     public bool isCaught = false;
     public bool canMove = false;
     public Sprite[] propSprites;
+    public float minX = -5f;
+    public float maxX = 5f;
+    public float minY = -4.7f;
+    public float maxY = 11.7f;
     private Joystick joystick;
 
     private void Start()
@@ -28,7 +32,14 @@ public class PlayerController : MonoBehaviourPun
 
     private void Update()
     {
-        if (!photonView.IsMine || !canMove || isCaught)
+        if (!photonView.IsMine)
+        {
+            return;
+        }
+
+        UpdateCamera();
+
+        if (!canMove || isCaught)
         {
             return;
         }
@@ -44,10 +55,15 @@ public class PlayerController : MonoBehaviourPun
 
         Vector2 movement = new Vector2(moveX, moveY).normalized;
         rb.linearVelocity = movement * moveSpeed;
+    }
 
+    private void UpdateCamera()
+    {
         if (Camera.main != null)
         {
-            Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+            float x = Mathf.Clamp(transform.position.x, minX, maxX);
+            float y = Mathf.Clamp(transform.position.y, minY, maxY);
+            Camera.main.transform.position = new Vector3(x, y, -10f);
         }
     }
 

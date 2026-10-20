@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public GameObject transformButton;
     public GameObject propSelectPanel;
+    public GameObject minimap;
 
     private float currentTimer;
     private bool timerRunning = false;
@@ -34,6 +35,11 @@ public class GameManager : MonoBehaviourPunCallbacks
         if (topBar != null)
         {
             topBar.SetActive(false);
+        }
+
+        if (minimap != null)
+        {
+            minimap.SetActive(false);
         }
 
         if (gameOverPanel != null)
@@ -58,7 +64,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsConnectedAndReady)
         {
-            Vector2 spawnPos = new Vector2(Random.Range(-4f, 4f), Random.Range(-2f, 2f));
+            Vector2 spawnPos = new Vector2(Random.Range(-2.5f, 2.5f), Random.Range(-8f, -6f));
             PhotonNetwork.Instantiate("Player", spawnPos, Quaternion.identity);
 
             if (PhotonNetwork.IsMasterClient)
@@ -139,6 +145,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public void ShowRoleScreen(bool isHunter)
     {
         rolePanel.SetActive(true);
+        rolePanel.transform.SetAsLastSibling();
 
         if (isHunter)
         {
@@ -172,6 +179,11 @@ public class GameManager : MonoBehaviourPunCallbacks
         if (topBar != null)
         {
             topBar.SetActive(true);
+        }
+
+        if (minimap != null)
+        {
+            minimap.SetActive(true);
         }
 
         if (phaseText != null)
@@ -267,7 +279,6 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
-
     public void OnClickChooseProp(int propIndex)
     {
         PlayerController[] players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
@@ -329,6 +340,11 @@ public class GameManager : MonoBehaviourPunCallbacks
         if (propSelectPanel != null)
         {
             propSelectPanel.SetActive(false);
+        }
+
+        if (minimap != null)
+        {
+            minimap.SetActive(false);
         }
 
         if (gameOverPanel != null)
