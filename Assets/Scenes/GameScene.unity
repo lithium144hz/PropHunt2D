@@ -4632,7 +4632,7 @@ GameObject:
   - component: {fileID: 1200493303}
   - component: {fileID: 1200493302}
   m_Layer: 5
-  m_Name: Slot
+  m_Name: Slot_Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4704,16 +4704,16 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1033493785}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: OnClickChooseProp
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &1200493303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4734,9 +4734,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3625043607559282579, guid: e70b83f427828104b8266323c0f791be, type: 3}
+  m_Sprite: {fileID: 8269622304889216901, guid: 29f6ff0c248fe504ea6d5bde1fa4d5b7, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5296,7 +5296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ghost
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5481,10 +5481,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1200493301}
   - {fileID: 1710688633}
   - {fileID: 1972446431}
   - {fileID: 2045648002}
-  - {fileID: 1200493301}
   - {fileID: 2048492395}
   - {fileID: 993426888}
   - {fileID: 509818490}
@@ -6429,8 +6429,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1033493785}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnClickClosePropSelect
-        m_Mode: 1
+        m_MethodName: OnClickChooseProp
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

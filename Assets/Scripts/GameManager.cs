@@ -284,7 +284,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         PlayerController[] players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
         for (int i = 0; i < players.Length; i++)
         {
-            if (players[i].photonView.IsMine && !players[i].isHunter)
+            if (players[i].photonView.IsMine && !players[i].isHunter && !players[i].isCaught)
             {
                 players[i].SelectProp(propIndex);
                 break;
