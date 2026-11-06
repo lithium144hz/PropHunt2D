@@ -6,10 +6,10 @@ public class Minimap : MonoBehaviour
     public RectTransform playerDot;
     public RectTransform mapRect;
 
-    public float worldMinX = -14f;
-    public float worldMaxX = 14f;
+    public float worldMinX = -14.33f;
+    public float worldMaxX = 14.33f;
     public float worldMinY = -10f;
-    public float worldMaxY = 17f;
+    public float worldMaxY = 17.33f;
 
     private Transform localPlayer;
 

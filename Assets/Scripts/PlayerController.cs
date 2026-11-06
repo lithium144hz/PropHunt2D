@@ -14,10 +14,13 @@ public class PlayerController : MonoBehaviourPun
     public Sprite[] hunterIdleFrames;
     public float animSpeed = 0.15f;
     public float idleAnimSpeed = 0.25f;
-    public float minX = -5f;
-    public float maxX = 5f;
-    public float minY = -4.7f;
-    public float maxY = 11.7f;
+    public float mapMinX = -14.33f;
+    public float mapMaxX = 14.33f;
+    public float mapMinY = -10f;
+    public float mapMaxY = 17.33f;
+    public GameObject flashlight;
+    public GameObject backpackLight;
+    public GameObject ghostAura;
     private Joystick joystick;
     private SpriteRenderer sr;
     private float animTimer;
@@ -76,6 +79,7 @@ public class PlayerController : MonoBehaviourPun
         }
 
         UpdateAnimation();
+        UpdateLights();
     }
 
     private void UpdateAnimation()
@@ -170,8 +174,33 @@ public class PlayerController : MonoBehaviourPun
     {
         if (Camera.main != null)
         {
-            float x = Mathf.Clamp(transform.position.x, minX, maxX);
-            float y = Mathf.Clamp(transform.position.y, minY, maxY);
+            float camVert = Camera.main.orthographicSize;
+            float camHoriz = camVert * Camera.main.aspect;
+            float minCamX = mapMinX + camHoriz;
+            float maxCamX = mapMaxX - camHoriz;
+            float minCamY = mapMinY + camVert;
+            float maxCamY = mapMaxY - camVert;
+
+            float x = transform.position.x;
+            if (minCamX < maxCamX)
+            {
+                x = Mathf.Clamp(x, minCamX, maxCamX);
+            }
+            else
+            {
+                x = (mapMinX + mapMaxX) * 0.5f;
+            }
+
+            float y = transform.position.y;
+            if (minCamY < maxCamY)
+            {
+                y = Mathf.Clamp(y, minCamY, maxCamY);
+            }
+            else
+            {
+                y = (mapMinY + mapMaxY) * 0.5f;
+            }
+
             Camera.main.transform.position = new Vector3(x, y, -10f);
         }
     }
@@ -202,6 +231,8 @@ public class PlayerController : MonoBehaviourPun
                 gm.ShowRoleScreen(isHunter);
             }
         }
+
+        UpdateLights();
     }
 
     [PunRPC]
@@ -221,6 +252,7 @@ public class PlayerController : MonoBehaviourPun
             {
                 sr.sprite = ghostFrames[0];
             }
+            UpdateLights();
             return;
         }
 
@@ -232,6 +264,7 @@ public class PlayerController : MonoBehaviourPun
                 sr.flipX = false;
             }
             isTransformed = true;
+            UpdateLights();
         }
     }
 
@@ -256,6 +289,8 @@ public class PlayerController : MonoBehaviourPun
         {
             sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.3f);
         }
+
+        UpdateLights();
 
         if (PhotonNetwork.IsMasterClient)
         {
@@ -283,5 +318,57 @@ public class PlayerController : MonoBehaviourPun
                 }
             }
         }
+    }
+
+    private void UpdateLights()
+    {
+        if (backpackLight != null && backpackLight.activeSelf != isHunter)
+        {
+            backpackLight.SetActive(isHunter);
+        }
+
+        if (ghostAura != null)
+        {
+            bool showAura = !isHunter && !isTransformed && !isCaught;
+            if (ghostAura.activeSelf != showAura)
+            {
+                ghostAura.SetActive(showAura);
+            }
+        }
+
+        if (flashlight != null)
+        {
+            if (flashlight.activeSelf != isHunter)
+            {
+                flashlight.SetActive(isHunter);
+            }
+
+            if (isHunter)
+            {
+                Vector2 dir = Vector2.zero;
+                if (joystick != null && (photonView.IsMine || !PhotonNetwork.IsConnected))
+                {
+                    dir = new Vector2(joystick.Horizontal(), joystick.Vertical());
+                }
+                else if (rb != null)
+                {
+                    dir = rb.linearVelocity;
+                }
+
+                if (dir.sqrMagnitude > 0.05f)
+                {
+                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
+                    flashlight.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+                }
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Vector3 center = new Vector3((mapMinX + mapMaxX) * 0.5f, (mapMinY + mapMaxY) * 0.5f, 0f);
+        Vector3 size = new Vector3(mapMaxX - mapMinX, mapMaxY - mapMinY, 0f);
+        Gizmos.DrawWireCube(center, size);
     }
 }
