@@ -1,5 +1,4 @@
 using UnityEngine;
-using Photon.Pun;
 
 public class Minimap : MonoBehaviour
 {
@@ -11,27 +10,13 @@ public class Minimap : MonoBehaviour
     public float worldMinY = -10f;
     public float worldMaxY = 17.33f;
 
-    private Transform localPlayer;
-
     private void Update()
     {
-        if (localPlayer == null)
+        if (PlayerController.Local != null && playerDot != null && mapRect != null)
         {
-            PlayerController[] players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-            for (int i = 0; i < players.Length; i++)
-            {
-                if (players[i].photonView.IsMine)
-                {
-                    localPlayer = players[i].transform;
-                    break;
-                }
-            }
-        }
-
-        if (localPlayer != null && playerDot != null && mapRect != null)
-        {
-            float normX = Mathf.InverseLerp(worldMinX, worldMaxX, localPlayer.position.x);
-            float normY = Mathf.InverseLerp(worldMinY, worldMaxY, localPlayer.position.y);
+            Vector3 pos = PlayerController.Local.transform.position;
+            float normX = Mathf.InverseLerp(worldMinX, worldMaxX, pos.x);
+            float normY = Mathf.InverseLerp(worldMinY, worldMaxY, pos.y);
 
             float posX = (normX - 0.5f) * mapRect.rect.width;
             float posY = (normY - 0.5f) * mapRect.rect.height;

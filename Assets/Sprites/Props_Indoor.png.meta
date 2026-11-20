@@ -1,0 +1,1417 @@
+fileFormatVersion: 2
+guid: 74c860a7f6b34a4987f30ddc7ae9a2b0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2087479201427034700
+    second: Props_Indoor_0
+  - first:
+      213: -3734547347572608293
+    second: Props_Indoor_1
+  - first:
+      213: 1187408173564051978
+    second: Props_Indoor_2
+  - first:
+      213: -8618199313366112256
+    second: Props_Indoor_3
+  - first:
+      213: 1381601144714273771
+    second: Props_Indoor_4
+  - first:
+      213: -7115222389938656948
+    second: Props_Indoor_5
+  - first:
+      213: 4647219445797114433
+    second: Props_Indoor_6
+  - first:
+      213: -4342715876915770962
+    second: Props_Indoor_7
+  - first:
+      213: 1842815784491796576
+    second: Props_Indoor_8
+  - first:
+      213: -7342865166163473930
+    second: Props_Indoor_9
+  - first:
+      213: -6585080845090199862
+    second: Props_Indoor_10
+  - first:
+      213: 6170216357060108823
+    second: Props_Indoor_11
+  - first:
+      213: 1476401937667763493
+    second: Props_Indoor_12
+  - first:
+      213: -4716790672982999732
+    second: Props_Indoor_13
+  - first:
+      213: -842562375815777856
+    second: Props_Indoor_14
+  - first:
+      213: 2729701410239425860
+    second: Props_Indoor_15
+  - first:
+      213: 8101290393404506566
+    second: Props_Indoor_16
+  - first:
+      213: -3275591126911326445
+    second: Props_Indoor_17
+  - first:
+      213: 8721600193735783041
+    second: Props_Indoor_18
+  - first:
+      213: -7766627416687212098
+    second: Props_Indoor_19
+  - first:
+      213: -5669876455934618832
+    second: Props_Indoor_20
+  - first:
+      213: -4483228534437305244
+    second: Props_Indoor_21
+  - first:
+      213: -5918173053628028265
+    second: Props_Indoor_22
+  - first:
+      213: -4383343319279826124
+    second: Props_Indoor_23
+  - first:
+      213: -1457838265178202378
+    second: Props_Indoor_24
+  - first:
+      213: 7967973898998186079
+    second: Props_Indoor_25
+  - first:
+      213: 3697205243865273119
+    second: Props_Indoor_26
+  - first:
+      213: 8612501992215710153
+    second: Props_Indoor_27
+  - first:
+      213: -1410124586905872743
+    second: Props_Indoor_28
+  - first:
+      213: -5087060699428271301
+    second: Props_Indoor_29
+  - first:
+      213: -5422539154314871707
+    second: Props_Indoor_30
+  - first:
+      213: 6479315339445652180
+    second: Props_Indoor_31
+  - first:
+      213: -8731030986764665242
+    second: Props_Indoor_32
+  - first:
+      213: 8915732569502155522
+    second: Props_Indoor_33
+  - first:
+      213: 2520098971977708748
+    second: Props_Indoor_34
+  - first:
+      213: -2259404542694258422
+    second: Props_Indoor_35
+  - first:
+      213: 1403976793340175542
+    second: Props_Indoor_36
+  - first:
+      213: 6279712103404494017
+    second: Props_Indoor_37
+  - first:
+      213: -5351420251730020015
+    second: Props_Indoor_38
+  - first:
+      213: -6942509092002585176
+    second: Props_Indoor_39
+  - first:
+      213: -2082724409277435338
+    second: Props_Indoor_40
+  - first:
+      213: 5258374275798784629
+    second: Props_Indoor_41
+  - first:
+      213: -1856931150094598866
+    second: Props_Indoor_42
+  - first:
+      213: -5618179168178239576
+    second: Props_Indoor_43
+  - first:
+      213: 4435742492698494549
+    second: Props_Indoor_44
+  - first:
+      213: 1508783398176699343
+    second: Props_Indoor_45
+  - first:
+      213: 3984002764572488110
+    second: Props_Indoor_46
+  - first:
+      213: 1822426939371526341
+    second: Props_Indoor_47
+  - first:
+      213: -9106018198118140122
+    second: Props_Indoor_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Props_Indoor_0
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 258
+        width: 39
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4edeceab9c807e378976a23de4a239e
+      internalID: -2087479201427034700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb20e4ff9382ccca79caeeca924f000
+      internalID: -3734547347572608293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_2
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 264
+        width: 30
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a42ae5471857a106c10a81a8e74dd1f
+      internalID: 1187408173564051978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 240
+        width: 23
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00284cbb62016688351b8a7b2c39a502
+      internalID: -8618199313366112256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_4
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 265
+        width: 71
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba3f7cbeb6e2c13fbb2cb4c75686396
+      internalID: 1381601144714273771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_5
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 289
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce9cc35efa6419dea11d64e747cdd24
+      internalID: -7115222389938656948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_6
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 288
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415206c4763d7e40a9ada185cca28ebc
+      internalID: 4647219445797114433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 240
+        width: 25
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae89fc2beb92bbc32cfede4857832435
+      internalID: -4342715876915770962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_8
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 240
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c81d3d31ff9219fb8fbd9e194db53b
+      internalID: 1842815784491796576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_9
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 264
+        width: 38
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6893c1909e7189aff0efb127e8dca28
+      internalID: -7342865166163473930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_10
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 265
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca662b53dc179da4e544d6769c4b20ae
+      internalID: -6585080845090199862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 168
+        width: 75
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1762dfe51503a155f679a299c8c7d921
+      internalID: 6170216357060108823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_12
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 170
+        width: 38
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ad6270bd3b7d144d604546161731c9
+      internalID: 1476401937667763493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_13
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 209
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfdf8a0df978abe5e39a45377013e58
+      internalID: -4716790672982999732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_14
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 216
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c03164b8fb9d4ef477b0f7fa706536f4
+      internalID: -842562375815777856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 216
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442d3454f8d8e125033a194112379383
+      internalID: 2729701410239425860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_16
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 216
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60129b9b0906d7016b2c38e27f84ecd
+      internalID: 8101290393404506566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_17
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 216
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1367079339c38ad2476bf8ec3626abff
+      internalID: -3275591126911326445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_18
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 216
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817299cc2a590979d6902ba55c84a20f
+      internalID: 8721600193735783041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_19
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 216
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be898c8d8365379480cbe8bdda0e5541
+      internalID: -7766627416687212098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_20
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 168
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3093aa53678d50b14c28022f0253e24b
+      internalID: -5669876455934618832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_21
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 168
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6424f8ad665fc8c1ec048f15a99f8214
+      internalID: -4483228534437305244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_22
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 125
+        width: 60
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976a36abf66cdead206b2e6647982b78
+      internalID: -5918173053628028265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_23
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 168
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348bbe9d793c2bc395eadac129c3e1f6
+      internalID: -4383343319279826124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 192
+        width: 58
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6de1460d2b7c4eb415990f096f55686
+      internalID: -1457838265178202378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_25
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 154
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f005f850bee936e529d738905f78148
+      internalID: 7967973898998186079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_26
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 111
+        width: 26
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f134da6941c4f33de9a4658d3b757db
+      internalID: 3697205243865273119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_27
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 108
+        width: 23
+        height: 58
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9895c51eec08577c7ebf661506fcd05
+      internalID: 8612501992215710153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_28
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 129
+        width: 77
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99566ecc283b6eec842ce9540c9e644f
+      internalID: -1410124586905872743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_29
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 131
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4bba0b3f2167b97d8fbafb23bf3c3d
+      internalID: -5087060699428271301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_30
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 120
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653c6a765e45bfb497bb78277ab84ca6
+      internalID: -5422539154314871707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_31
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 120
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4ca65ebf826eb5974f00abc63d25d34
+      internalID: 6479315339445652180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_32
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 72
+        width: 17
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bef6969325d5866697207abc1fa1ae
+      internalID: -8731030986764665242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_33
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 72
+        width: 17
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02838ecd880bbb7b1b6b69c08d3311a7
+      internalID: 8915732569502155522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_34
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 88
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf48eb7a930f922a43d90f17e84535b
+      internalID: 2520098971977708748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_35
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 87
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a09ce0c8afba4e0c1133ef112ed0a06
+      internalID: -2259404542694258422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_36
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 87
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e4ee7774ed7b13f6104712c91ff42c
+      internalID: 1403976793340175542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_37
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 96
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c15c25ffe2042657aae524551780ee1f
+      internalID: 6279712103404494017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_38
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 88
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f9cc53a2efbbb56505ad9085292800
+      internalID: -5351420251730020015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_39
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 72
+        width: 73
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8254489c340a79f9641d9c6b313f343
+      internalID: -6942509092002585176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_40
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 72
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b2fb3b2fad18e3464da4e327a3d723
+      internalID: -2082724409277435338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_41
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 72
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75da09358b7ff948ed3af9daf7db974a
+      internalID: 5258374275798784629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_42
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 63
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efd401af5da3ae6d1448e67e6f6414b
+      internalID: -1856931150094598866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_43
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 68
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8873c1cd03708b2f701ecf499852f89
+      internalID: -5618179168178239576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_44
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 68
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554666a84bec8e3d043f438671da37c5
+      internalID: 4435742492698494549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_45
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 68
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf3354bb8146f0148e8509f6fc5cd099
+      internalID: 1508783398176699343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_46
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 53
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7184fe67054a373a4e5c20d408f7d2
+      internalID: 3984002764572488110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_47
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 61
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c598574ea58f4a19d0309d271a465380
+      internalID: 1822426939371526341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props_Indoor_48
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 7
+        width: 110
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f7ecceb1eca0813b39e03e1f32afa2
+      internalID: -9106018198118140122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3d0dcadf6d73ce34e92e0de612994f30
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Props_Indoor_0: -2087479201427034700
+      Props_Indoor_1: -3734547347572608293
+      Props_Indoor_10: -6585080845090199862
+      Props_Indoor_11: 6170216357060108823
+      Props_Indoor_12: 1476401937667763493
+      Props_Indoor_13: -4716790672982999732
+      Props_Indoor_14: -842562375815777856
+      Props_Indoor_15: 2729701410239425860
+      Props_Indoor_16: 8101290393404506566
+      Props_Indoor_17: -3275591126911326445
+      Props_Indoor_18: 8721600193735783041
+      Props_Indoor_19: -7766627416687212098
+      Props_Indoor_2: 1187408173564051978
+      Props_Indoor_20: -5669876455934618832
+      Props_Indoor_21: -4483228534437305244
+      Props_Indoor_22: -5918173053628028265
+      Props_Indoor_23: -4383343319279826124
+      Props_Indoor_24: -1457838265178202378
+      Props_Indoor_25: 7967973898998186079
+      Props_Indoor_26: 3697205243865273119
+      Props_Indoor_27: 8612501992215710153
+      Props_Indoor_28: -1410124586905872743
+      Props_Indoor_29: -5087060699428271301
+      Props_Indoor_3: -8618199313366112256
+      Props_Indoor_30: -5422539154314871707
+      Props_Indoor_31: 6479315339445652180
+      Props_Indoor_32: -8731030986764665242
+      Props_Indoor_33: 8915732569502155522
+      Props_Indoor_34: 2520098971977708748
+      Props_Indoor_35: -2259404542694258422
+      Props_Indoor_36: 1403976793340175542
+      Props_Indoor_37: 6279712103404494017
+      Props_Indoor_38: -5351420251730020015
+      Props_Indoor_39: -6942509092002585176
+      Props_Indoor_4: 1381601144714273771
+      Props_Indoor_40: -2082724409277435338
+      Props_Indoor_41: 5258374275798784629
+      Props_Indoor_42: -1856931150094598866
+      Props_Indoor_43: -5618179168178239576
+      Props_Indoor_44: 4435742492698494549
+      Props_Indoor_45: 1508783398176699343
+      Props_Indoor_46: 3984002764572488110
+      Props_Indoor_47: 1822426939371526341
+      Props_Indoor_48: -9106018198118140122
+      Props_Indoor_5: -7115222389938656948
+      Props_Indoor_6: 4647219445797114433
+      Props_Indoor_7: -4342715876915770962
+      Props_Indoor_8: 1842815784491796576
+      Props_Indoor_9: -7342865166163473930
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

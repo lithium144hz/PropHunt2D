@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public GameObject transformButton;
     public GameObject propSelectPanel;
     public GameObject minimap;
+    public Transform[] spawnPoints;
 
     private float currentTimer;
     private bool timerRunning = false;
@@ -64,7 +65,20 @@ public class GameManager : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsConnectedAndReady)
         {
-            Vector2 spawnPos = new Vector2(Random.Range(-2.5f, 2.5f), Random.Range(-8f, -6f));
+            Vector2 spawnPos = Vector2.zero;
+            if (spawnPoints != null && spawnPoints.Length > 0)
+            {
+                int randomIndex = Random.Range(0, spawnPoints.Length);
+                if (spawnPoints[randomIndex] != null)
+                {
+                    spawnPos = spawnPoints[randomIndex].position;
+                }
+            }
+            else
+            {
+                spawnPos = new Vector2(Random.Range(-2.5f, 2.5f), Random.Range(-8f, -6f));
+            }
+
             PhotonNetwork.Instantiate("Player", spawnPos, Quaternion.identity);
 
             if (PhotonNetwork.IsMasterClient)
@@ -156,7 +170,7 @@ public class GameManager : MonoBehaviourPunCallbacks
             roleText.text = "You are a Prop!";
         }
 
-        Invoke("EndIntro", 5f);
+        Invoke("EndIntro", 1f);
     }
 
     private void EndIntro()
@@ -173,7 +187,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public void RpcStartHidingPhase()
     {
         currentPhase = 1;
-        currentTimer = 30f;
+        currentTimer = 1f;
         timerRunning = true;
 
         if (topBar != null)
@@ -191,17 +205,13 @@ public class GameManager : MonoBehaviourPunCallbacks
             phaseText.text = "PROPS ARE HIDING...";
         }
 
-        PlayerController[] players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-        for (int i = 0; i < players.Length; i++)
+        if (PlayerController.Local != null)
         {
-            if (players[i].photonView.IsMine)
-            {
-                players[i].canMove = !players[i].isHunter;
+            PlayerController.Local.canMove = !PlayerController.Local.isHunter;
 
-                if (!players[i].isHunter && transformButton != null)
-                {
-                    transformButton.SetActive(true);
-                }
+            if (!PlayerController.Local.isHunter && transformButton != null)
+            {
+                transformButton.SetActive(true);
             }
         }
     }
@@ -217,52 +227,32 @@ public class GameManager : MonoBehaviourPunCallbacks
             phaseText.text = "HUNTER IS RELEASED!";
         }
 
-        PlayerController[] players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-        for (int i = 0; i < players.Length; i++)
+        if (PlayerController.Local != null)
         {
-            if (players[i].photonView.IsMine)
-            {
-                players[i].canMove = true;
+            PlayerController.Local.canMove = true;
 
-                if (players[i].isHunter && catchButton != null)
-                {
-                    catchButton.gameObject.SetActive(true);
-                }
+            if (PlayerController.Local.isHunter && catchButton != null)
+            {
+                catchButton.gameObject.SetActive(true);
             }
         }
     }
 
     public void OnClickCatch()
     {
-        if (catchCooldown > 0)
-        {
-            return;
-        }
-
-        PlayerController myPlayer = null;
-        PlayerController[] players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-
-        for (int i = 0; i < players.Length; i++)
-        {
-            if (players[i].photonView.IsMine)
-            {
-                myPlayer = players[i];
-                break;
-            }
-        }
-
-        if (myPlayer == null || !myPlayer.isHunter)
+        if (catchCooldown > 0 || PlayerController.Local == null || !PlayerController.Local.isHunter)
         {
             return;
         }
 
         catchCooldown = 5f;
 
+        PlayerController[] players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
         for (int i = 0; i < players.Length; i++)
         {
             if (!players[i].isHunter && !players[i].isCaught)
             {
-                float distance = Vector2.Distance(myPlayer.transform.position, players[i].transform.position);
+                float distance = Vector2.Distance(PlayerController.Local.transform.position, players[i].transform.position);
                 if (distance <= 2.2f)
                 {
                     players[i].photonView.RPC("RpcGetCaught", RpcTarget.AllBuffered);
@@ -281,14 +271,9 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public void OnClickChooseProp(int propIndex)
     {
-        PlayerController[] players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-        for (int i = 0; i < players.Length; i++)
+        if (PlayerController.Local != null && !PlayerController.Local.isHunter && !PlayerController.Local.isCaught)
         {
-            if (players[i].photonView.IsMine && !players[i].isHunter && !players[i].isCaught)
-            {
-                players[i].SelectProp(propIndex);
-                break;
-            }
+            PlayerController.Local.SelectProp(propIndex);
         }
 
         if (propSelectPanel != null)
@@ -357,13 +342,9 @@ public class GameManager : MonoBehaviourPunCallbacks
             winnerText.text = winner;
         }
 
-        PlayerController[] players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-        for (int i = 0; i < players.Length; i++)
+        if (PlayerController.Local != null)
         {
-            if (players[i].photonView.IsMine)
-            {
-                players[i].canMove = false;
-            }
+            PlayerController.Local.canMove = false;
         }
     }
 

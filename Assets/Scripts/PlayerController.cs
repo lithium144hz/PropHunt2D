@@ -1,43 +1,36 @@
 using UnityEngine;
 using Photon.Pun;
+using Unity.Cinemachine;
 
 public class PlayerController : MonoBehaviourPun
 {
+    public static PlayerController Local { get; private set; }
+
     public float moveSpeed = 10f;
     public Rigidbody2D rb;
     public bool isHunter;
     public bool isCaught = false;
     public bool canMove = false;
     public Sprite[] propSprites;
-    public Sprite[] ghostFrames;
-    public Sprite[] hunterWalkFrames;
-    public Sprite[] hunterIdleFrames;
-    public float animSpeed = 0.15f;
-    public float idleAnimSpeed = 0.25f;
-    public float mapMinX = -14.33f;
-    public float mapMaxX = 14.33f;
-    public float mapMinY = -10f;
-    public float mapMaxY = 17.33f;
     public GameObject flashlight;
     public GameObject backpackLight;
     public GameObject ghostAura;
     private Joystick joystick;
     private SpriteRenderer sr;
-    private float animTimer;
-    private int animIndex;
+    private Animator animator;
     private bool isTransformed = false;
-    private bool wasMoving = false;
     private Vector3 lastPos;
 
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        lastPos = transform.position;
+
         if (sr != null)
         {
             sr.color = Color.white;
         }
-
-        lastPos = transform.position;
 
         if (rb == null)
         {
@@ -46,18 +39,29 @@ public class PlayerController : MonoBehaviourPun
 
         if (photonView.IsMine)
         {
+            Local = this;
             joystick = FindFirstObjectByType<Joystick>();
-        }
 
-        IgnoreOtherPlayers();
+            CinemachineCamera vcam = FindFirstObjectByType<CinemachineCamera>();
+            if (vcam != null)
+            {
+                vcam.Follow = transform;
+            }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (Local == this)
+        {
+            Local = null;
+        }
     }
 
     private void Update()
     {
         if (photonView.IsMine)
         {
-            UpdateCamera();
-
             if (canMove && !isCaught)
             {
                 float moveX = 0f;
@@ -84,14 +88,18 @@ public class PlayerController : MonoBehaviourPun
 
     private void UpdateAnimation()
     {
-        if (sr == null)
+        if (isTransformed || isCaught)
         {
+            if (animator != null && animator.enabled)
+            {
+                animator.enabled = false;
+            }
             return;
         }
 
-        if (isTransformed || isCaught)
+        if (animator != null && !animator.enabled)
         {
-            return;
+            animator.enabled = true;
         }
 
         bool isMoving = false;
@@ -131,77 +139,10 @@ public class PlayerController : MonoBehaviourPun
             lastPos = transform.position;
         }
 
-        if (isMoving != wasMoving)
+        if (animator != null)
         {
-            wasMoving = isMoving;
-            animIndex = 0;
-            animTimer = 0f;
-        }
-
-        Sprite[] currentFrames = null;
-        if (isHunter)
-        {
-            currentFrames = isMoving ? hunterWalkFrames : hunterIdleFrames;
-        }
-        else
-        {
-            currentFrames = ghostFrames;
-        }
-
-        if (currentFrames == null || currentFrames.Length == 0)
-        {
-            return;
-        }
-
-        float currentSpeed = (isHunter && !isMoving) ? idleAnimSpeed : animSpeed;
-
-        animTimer += Time.deltaTime;
-        if (animTimer >= currentSpeed)
-        {
-            animTimer = 0f;
-            animIndex = (animIndex + 1) % currentFrames.Length;
-        }
-
-        if (animIndex >= currentFrames.Length)
-        {
-            animIndex = 0;
-        }
-
-        sr.sprite = currentFrames[animIndex];
-    }
-
-    private void UpdateCamera()
-    {
-        if (Camera.main != null)
-        {
-            float camVert = Camera.main.orthographicSize;
-            float camHoriz = camVert * Camera.main.aspect;
-            float minCamX = mapMinX + camHoriz;
-            float maxCamX = mapMaxX - camHoriz;
-            float minCamY = mapMinY + camVert;
-            float maxCamY = mapMaxY - camVert;
-
-            float x = transform.position.x;
-            if (minCamX < maxCamX)
-            {
-                x = Mathf.Clamp(x, minCamX, maxCamX);
-            }
-            else
-            {
-                x = (mapMinX + mapMaxX) * 0.5f;
-            }
-
-            float y = transform.position.y;
-            if (minCamY < maxCamY)
-            {
-                y = Mathf.Clamp(y, minCamY, maxCamY);
-            }
-            else
-            {
-                y = (mapMinY + mapMaxY) * 0.5f;
-            }
-
-            Camera.main.transform.position = new Vector3(x, y, -10f);
+            animator.SetBool("isHunter", isHunter);
+            animator.SetBool("isMoving", isMoving);
         }
     }
 
@@ -210,17 +151,16 @@ public class PlayerController : MonoBehaviourPun
     {
         isHunter = hunter;
         isTransformed = false;
-        animIndex = 0;
-        animTimer = 0f;
-
-        if (sr == null)
-        {
-            sr = GetComponent<SpriteRenderer>();
-        }
 
         if (sr != null)
         {
             sr.color = Color.white;
+        }
+
+        if (animator != null)
+        {
+            animator.enabled = true;
+            animator.SetBool("isHunter", isHunter);
         }
 
         if (photonView.IsMine)
@@ -238,19 +178,12 @@ public class PlayerController : MonoBehaviourPun
     [PunRPC]
     public void RpcChangeProp(int propIndex)
     {
-        if (sr == null)
-        {
-            sr = GetComponent<SpriteRenderer>();
-        }
-
         if (propIndex < 0)
         {
             isTransformed = false;
-            animIndex = 0;
-            animTimer = 0f;
-            if (sr != null && ghostFrames != null && ghostFrames.Length > 0)
+            if (animator != null)
             {
-                sr.sprite = ghostFrames[0];
+                animator.enabled = true;
             }
             UpdateLights();
             return;
@@ -258,6 +191,10 @@ public class PlayerController : MonoBehaviourPun
 
         if (propSprites != null && propIndex >= 0 && propIndex < propSprites.Length)
         {
+            if (animator != null)
+            {
+                animator.enabled = false;
+            }
             if (sr != null)
             {
                 sr.sprite = propSprites[propIndex];
@@ -280,9 +217,9 @@ public class PlayerController : MonoBehaviourPun
         canMove = false;
         rb.linearVelocity = Vector2.zero;
 
-        if (sr == null)
+        if (animator != null)
         {
-            sr = GetComponent<SpriteRenderer>();
+            animator.enabled = false;
         }
 
         if (sr != null)
@@ -298,24 +235,6 @@ public class PlayerController : MonoBehaviourPun
             if (gm != null)
             {
                 gm.CheckAllPropsCaught();
-            }
-        }
-    }
-
-    private void IgnoreOtherPlayers()
-    {
-        Collider2D myCol = GetComponent<Collider2D>();
-        PlayerController[] allPlayers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-
-        for (int i = 0; i < allPlayers.Length; i++)
-        {
-            if (allPlayers[i] != this)
-            {
-                Collider2D otherCol = allPlayers[i].GetComponent<Collider2D>();
-                if (myCol != null && otherCol != null)
-                {
-                    Physics2D.IgnoreCollision(myCol, otherCol);
-                }
             }
         }
     }
@@ -346,7 +265,7 @@ public class PlayerController : MonoBehaviourPun
             if (isHunter)
             {
                 Vector2 dir = Vector2.zero;
-                if (joystick != null && (photonView.IsMine || !PhotonNetwork.IsConnected))
+                if (joystick != null && photonView.IsMine)
                 {
                     dir = new Vector2(joystick.Horizontal(), joystick.Vertical());
                 }
@@ -362,13 +281,5 @@ public class PlayerController : MonoBehaviourPun
                 }
             }
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Vector3 center = new Vector3((mapMinX + mapMaxX) * 0.5f, (mapMinY + mapMaxY) * 0.5f, 0f);
-        Vector3 size = new Vector3(mapMaxX - mapMinX, mapMaxY - mapMinY, 0f);
-        Gizmos.DrawWireCube(center, size);
     }
 }
