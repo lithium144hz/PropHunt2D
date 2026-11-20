@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviourPun
         if (sr != null)
         {
             sr.color = Color.white;
+            sr.sortingOrder = isHunter ? 10 : 12;
         }
 
         if (rb == null)
@@ -152,9 +153,16 @@ public class PlayerController : MonoBehaviourPun
         isHunter = hunter;
         isTransformed = false;
 
+        int targetLayer = LayerMask.NameToLayer(isHunter ? "Hunter" : "Ghost");
+        if (targetLayer != -1)
+        {
+            gameObject.layer = targetLayer;
+        }
+
         if (sr != null)
         {
             sr.color = Color.white;
+            sr.sortingOrder = isHunter ? 10 : 12;
         }
 
         if (animator != null)
